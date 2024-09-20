@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bahrin.Harbour.Data\Bahrin.Harbour.Data.csproj" />
+    <ProjectReference Include="..\Bahrin.Harbour.Helper\Bahrin.Harbour.Helper.csproj" />
+    <ProjectReference Include="..\Bahrin.Harbour.Model\Bahrin.Harbour.Model.csproj" />
+  </ItemGroup>
+
+</Project>

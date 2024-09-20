@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <form id="books-from">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Book List</h4>
+                        </div>
+                        <div class="iq-card-header-toolbar d-flex align-items-center">
+                            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("CreateClient", "Client")'">Click Me </button>
+
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <input id="MainPageLoad" type="hidden" value="1" />
+                        @*   <input id="DeleteBooksActionURL" type="hidden" value="@Url.Action("BookDelete","Book")" />
+                        <input id="DeactivateBooksActionURL" type="hidden" value="@Url.Action("BookDeactivate","Book")" />
+                        <input id="BookDetailActionURL" type="hidden" value="@Url.Action("BookDetail","Book")" />      *@
+                        <div class="row">
+                            <div class="form-group col-md-1">
+                                <label asp-for="isActive"></label>
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <button type="button" onclick="Book.ClearExternalFilter()" class="btn btn-primary mr-2 pull-right">Clear</button>
+                                <button type="button" onclick="Book.GetFilteredBooksData()" class="btn btn-primary mr-2 pull-right">Search</button>
+                            </div>
+                        </div>
+                        @await Html.PartialAsync("AppUserList")
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

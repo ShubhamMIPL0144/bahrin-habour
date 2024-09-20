@@ -1,0 +1,143 @@
+﻿@model Bahrin.Harbour.Model.ClientModel.ClientViewModel
+
+@{
+    ViewData["Title"] = "Create Client";
+    Layout = null;
+}
+
+<h1>Create Client</h1>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+@using (Html.BeginForm("CreateClient", "Client", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ClientName)
+        @Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ClientName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ClientId)
+        @Html.TextBoxFor(model => model.ClientId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.EmailAddress)
+        @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone)
+        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhoneNumber)
+        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country)
+        @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City)
+        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.State)
+        @Html.TextBoxFor(model => model.State, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Postcode)
+        @Html.TextBoxFor(model => model.Postcode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address)
+        @Html.TextAreaFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Properties)
+        @Html.TextBoxFor(model => model.Properties, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Properties, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TypeOfProperty)
+        @Html.TextBoxFor(model => model.TypeOfProperty, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TypeOfProperty, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PropertyLocation)
+        @Html.TextBoxFor(model => model.PropertyLocation, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PropertyLocation, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PropertyPrice)
+        @Html.TextBoxFor(model => model.PropertyPrice, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PropertyPrice, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AvailedDiscount)
+        @Html.TextBoxFor(model => model.AvailedDiscount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.AvailedDiscount, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Street)
+        @Html.TextBoxFor(model => model.Street, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SaveProperty)
+        @Html.CheckBoxFor(model => model.SaveProperty)
+        @Html.ValidationMessageFor(model => model.SaveProperty, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastVisit)
+        @Html.TextBoxFor(model => model.LastVisit, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(model => model.LastVisit, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Status)
+        @Html.TextBoxFor(model => model.Status, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
